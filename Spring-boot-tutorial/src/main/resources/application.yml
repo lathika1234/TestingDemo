@@ -1,0 +1,27 @@
+server:
+  port: 9000
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    active:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: Sahyadri@248
+    url: jdbc:mysql://127.0.0.1:3306/Practice
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Daily Code Buffer daily!!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
